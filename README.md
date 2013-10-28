@@ -11,5 +11,10 @@ Revcontrol saves a copy for each revision in the working directory. If you have 
 (It can be used without revcontrol, but there's not much of a point to it.)
 
 ### Installation
-- Copy scribe to your PATH;
-- make sure it's executable.
+- Resolve the dependencies;
+- copy scribe to your PATH and make sure it's executable:
+
+``
+sudo cp scribe /usr/bin/
+sudo chmod +x /usr/bin/scribe
+``
