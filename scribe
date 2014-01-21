@@ -8,7 +8,8 @@ fi
 # If the file doesn't exist, make a directory for it.
 if ! [[ -f "$1/$1" ]]; then
 	mkdir $1
+	touch "$1/$1"
 fi
 
 nohup revcontrol "$1/$1" & # Comment this line if you don't want revision control.
-vim "$1/$1"
+vim "$1/$1" # Edit this to suit your needs.
