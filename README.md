@@ -16,7 +16,6 @@ Revcontrol saves a copy for each revision in the working directory. If you have 
 
 ```
 sudo cp scribe /usr/bin/
-
 sudo chmod +x /usr/bin/scribe
 ```
 
