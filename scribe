@@ -1,4 +1,10 @@
 #!/bin/bash
+
+# This is the scribe source code. If the keepwritings installer brought you here, please configure the following variable to the editor you'd like to use, then hit ^x.
+editor="xterm -e nano"
+# editor="gedit"
+# editor="gvim"
+
 # Check how many arguments were passed.
 if ! [[ $# -eq 1 ]]; then
 	echo "Usage: scribe <filename>."
@@ -7,9 +13,9 @@ fi
 
 # If the file doesn't exist, make a directory for it.
 if ! [[ -f "$1/$1" ]]; then
-	mkdir $1
+	mkdir "$1"
 	touch "$1/$1"
 fi
 
-nohup revcontrol "$1/$1" & # Comment this line if you don't want revision control.
-vim "$1/$1" # Edit this to suit your needs.
+nohup revcontrol "$1/$1" & # Comment this line if you don't want revision control. (Although that kind of defeats the point.)
+$editor "$1/$1" # Edit this to suit your needs.
